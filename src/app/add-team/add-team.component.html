@@ -1,18 +1,14 @@
-
-<form class="example-form">
-  <mat-form-field appearance="fill" class="example-full-width">
-    <mat-label>Favorite food</mat-label>
-    <input matInput placeholder="Ex. Pizza" type="text"
-           [(ngModel)]="nameTeam"
-           (input)="chgname(nameTeam)"
-           [ngModelOptions]="{standalone: true}">
-  </mat-form-field>
-
-</form>
-<button mat-button class="my-button" (click)="addToteams()" >Add Team</button>
+<div class="p-inputgroup">
+  <button type="button" pButton pRipple label="Add Team" (click)="addToteams()" class="btn-grad"></button>
+  <input type="text" pInputText placeholder="team" [(ngModel)]="nameTeam" (input)="chgname(nameTeam)"/>
+</div>
 
 
-<div class="parent">
-  <div *ngFor="let teamlist of teams; let i = index " class="{{getClass(i+1)}} my-button">{{teamlist.name}} </div>
-
+<div *ngFor="let item of [].constructor((moduloTeam())); let i = index" class="positionPoule">
+  <p-card [style]="{'width': '50rem', 'margin-bottom': '1em'}">
+    <ng-template pTemplate="title">
+      <h1>poule {{i+1}}</h1>
+    </ng-template>
+    <app-poule3 [team]="this.teams" [poule]="i"></app-poule3>
+  </p-card>
 </div>

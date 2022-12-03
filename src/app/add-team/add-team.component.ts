@@ -1,7 +1,6 @@
-import { Component } from '@angular/core';
+import {ChangeDetectorRef, Component} from '@angular/core';
 import {Team} from "../domain/team";
 import {addTeam} from "../domain/addteam";
-
 @Component({
   selector: 'app-add-team',
   templateUrl: './add-team.component.html',
@@ -12,9 +11,10 @@ export class AddTeamComponent {
 
   public team:Team={name: 'Tournoi Team',score:[]}
   public teams:Team[] =[]
-  nameTeam: string='';
+  nameTeam: string='essai';
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
 
@@ -33,5 +33,11 @@ export class AddTeamComponent {
 
   getClass(i: number) {
     return "div"+i
+  }
+
+
+
+  moduloTeam() {
+    return Math.round((this.teams.length-1)/3+1)
   }
 }

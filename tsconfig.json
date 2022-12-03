@@ -1,4 +1,11 @@
 {
+  "noImplicitAny": true,
+  "noImplicitThis": true,
+  "alwaysStrict": true,
+  "strictBindCallApply": true,
+  "strictNullChecks": true,
+  "strictFunctionTypes": true,
+  "strictPropertyInitialization": true,
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
@@ -15,11 +22,11 @@
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "importHelpers": true,
-    "target": "ES2022",
-    "module": "ES2022",
+    "target": "esnext",
+    "module": "commonjs",
     "useDefineForClassFields": false,
     "lib": [
-      "ES2022",
+      "esnext",
       "dom"
     ]
   },
