@@ -12,7 +12,13 @@ import {InputTextModule} from "primeng/inputtext";
 import {FormsModule} from "@angular/forms";
 import {InputNumberModule} from "primeng/inputnumber";
 import {CardModule} from "primeng/card";
-import { Poule4Component } from './poule4/poule4.component';
+import {Poule4Component} from './poule4/poule4.component';
+import {ListboxModule} from "primeng/listbox";
+import {HttpClientModule} from "@angular/common/http";
+import {ToastModule} from "primeng/toast";
+import {DataViewModule} from "primeng/dataview";
+import {StyleClassModule} from "primeng/styleclass";
+import {TagModule} from "primeng/tag";
 
 
 @NgModule({
@@ -21,12 +27,17 @@ import { Poule4Component } from './poule4/poule4.component';
     AppRoutingModule,
     FormsModule,
     BrowserAnimationsModule,
-
+    HttpClientModule,
     ButtonModule,
     RippleModule,
     InputTextModule,
     InputNumberModule,
-    CardModule
+    CardModule,
+    ListboxModule,
+    ToastModule,
+    DataViewModule,
+    TagModule,
+
   ],
   declarations: [
     AppComponent,AddTeamComponent, PouleComponent, Poule4Component

@@ -1,7 +1,8 @@
 import { Team } from "./team";
 
 
-export const addTeam = (teams: Team[], team: Team) => {
-    teams.push({name:team.name,score:team.score});
-    return teams
+export const addTeam = (teams: Team[], teamadd: Team) => {
+
+    teams.push({name:teamadd.name,score:teamadd.score})
+    return teams.map(team =>team)
 };

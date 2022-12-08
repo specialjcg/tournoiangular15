@@ -5,3 +5,16 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-
 @import url('https://fonts.cdnfonts.com/css/original-surfer');
 @import url('https://fonts.cdnfonts.com/css/oleo-script');
 @import url('https://fonts.cdnfonts.com/css/lobster-2');
+.p-grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+  margin-top: -0.5rem;
+  height:500px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+

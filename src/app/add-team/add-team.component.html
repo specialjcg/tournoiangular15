@@ -1,8 +1,34 @@
 <div class="p-inputgroup">
-  <button type="button" pButton pRipple label="Add Team" (click)="addToteams()" class="btn-grad"></button>
+  <button type="button" pButton pRipple label="Add Team (add in group with separate by ';' )"
+          (click)="addToteamsGroup()" class="btn-grad" [style]=test()></button>
   <input type="text" pInputText placeholder="team" [(ngModel)]="nameTeam" (input)="chgname(nameTeam)"/>
 </div>
 
+<div class="card1">
+  <p-dataView #dv [value]="teams" [paginator]="true" [rows]="14"
+              layout="grid">
+    <ng-template pTemplate="header">
+      <button type="button" pButton pRipple label="Create Pool 3"
+              (click)="validatePool3()" class="btn-grad" [style]=test()></button>
+    </ng-template>
+    <ng-template let-team pTemplate="gridItem" >
+      <div class="col-12 md:col-4">
+        <div [style]=test() class="product-grid-item card" >
+
+          <div class="product-grid-item-content">
+          <p >{{team.name}}</p>
+            <p-tag severity="danger" value="suprimer" (click)="delete(team)" class="btnsupr"></p-tag>
+        </div>
+
+      </div>
+
+
+    </div>
+    </ng-template>
+  </p-dataView>
+</div>
+
+<p-toast position="top-right" [showTransitionOptions]="'0ms'" [hideTransitionOptions]="'0ms'"></p-toast>
 
 <div *ngFor="let item of [].constructor((moduloTeam())); let i = index" class="positionPoule">
   <p-card [style]="{'width': '50rem', 'margin-bottom': '1em'}">

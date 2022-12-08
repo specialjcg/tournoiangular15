@@ -7,9 +7,7 @@ import {BrowserModule} from "@angular/platform-browser";
 import {AppRoutingModule} from "../app-routing.module";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {FormsModule} from "@angular/forms";
-import {MatButtonModule} from "@angular/material/button";
-import {MatInputModule} from "@angular/material/input";
-import {MatFormFieldModule} from "@angular/material/form-field";
+
 
 const createPool = (teams: Team[], poule: number): Team[][] => {
   const pool:Team[][]=[]
@@ -41,9 +39,7 @@ describe('AddTeamComponent', () => {
       imports: [
         BrowserModule,
         AppRoutingModule,
-        MatButtonModule,
-        MatFormFieldModule,
-        MatInputModule,
+
         BrowserAnimationsModule,
         FormsModule
       ],
