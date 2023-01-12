@@ -19,28 +19,31 @@ import {ToastModule} from "primeng/toast";
 import {DataViewModule} from "primeng/dataview";
 import {StyleClassModule} from "primeng/styleclass";
 import {TagModule} from "primeng/tag";
+import {Poule5Component} from "./poule5/poule5.component";
+import {TableModule} from "primeng/table";
 
 
 @NgModule({
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule,
-    BrowserAnimationsModule,
-    HttpClientModule,
-    ButtonModule,
-    RippleModule,
-    InputTextModule,
-    InputNumberModule,
-    CardModule,
-    ListboxModule,
-    ToastModule,
-    DataViewModule,
-    TagModule,
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        FormsModule,
+        BrowserAnimationsModule,
+        HttpClientModule,
+        ButtonModule,
+        RippleModule,
+        InputTextModule,
+        InputNumberModule,
+        CardModule,
+        ListboxModule,
+        ToastModule,
+        DataViewModule,
+        TagModule,
+        TableModule,
 
-  ],
+    ],
   declarations: [
-    AppComponent,AddTeamComponent, PouleComponent, Poule4Component
+    AppComponent,AddTeamComponent, PouleComponent, Poule4Component,Poule5Component
   ],
 
   providers: [],

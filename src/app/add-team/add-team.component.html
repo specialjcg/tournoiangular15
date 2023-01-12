@@ -1,23 +1,23 @@
-<div class="p-inputgroup">
-  <button type="button" pButton pRipple label="Add Team (add in group with separate by ';' )"
-          (click)="addToteamsGroup()" class="btn-grad" [style]=test()></button>
-  <input type="text" pInputText placeholder="team" [(ngModel)]="nameTeam" (input)="chgname(nameTeam)"/>
-</div>
+
 
 <div class="card1">
   <p-dataView #dv [value]="teams" [paginator]="true" [rows]="14"
               layout="grid">
-    <ng-template pTemplate="header">
+    <ng-template pTemplate="header" >
       <button type="button" pButton pRipple label="Create Pool 3"
-              (click)="validatePool3()" class="btn-grad" [style]=test()></button>
+              (click)="validatePool3()" class="button-pool" [style]=test()></button>
+      <button type="button" pButton pRipple label="Create Pool 4"
+              (click)="validatePool4()" class="button-pool" [style]=test2()></button>
     </ng-template>
-    <ng-template let-team pTemplate="gridItem" >
+    <ng-template let-team pTemplate="gridItem"  >
       <div class="col-12 md:col-4">
         <div [style]=test() class="product-grid-item card" >
 
           <div class="product-grid-item-content">
           <p >{{team.name}}</p>
-            <p-tag severity="danger" value="suprimer" (click)="delete(team)" class="btnsupr"></p-tag>
+
+
+            <button class="button-29" role="button" (click)="delete(team)">Suprimer</button>
         </div>
 
       </div>
@@ -30,11 +30,13 @@
 
 <p-toast position="top-right" [showTransitionOptions]="'0ms'" [hideTransitionOptions]="'0ms'"></p-toast>
 
-<div *ngFor="let item of [].constructor((moduloTeam())); let i = index" class="positionPoule">
-  <p-card [style]="{'width': '50rem', 'margin-bottom': '1em'}">
+<div *ngFor="let item of poules; let i = index" class="positionPoule">
+  <p-card *ngIf="poule3===true" [style]="{'width': '50rem', 'margin-bottom': '1em'}">
     <ng-template pTemplate="title">
       <h1>poule {{i+1}}</h1>
     </ng-template>
-    <app-poule3 [team]="this.teams" [poule]="i"></app-poule3>
+    <app-poule3 *ngIf="item===3" [team]="this.teams" [poule]="i" [poules]="poules"></app-poule3>
+    <app-poule4 *ngIf="item===4" [team]="this.teams" [poule]="i" [poules]="poules"></app-poule4>
+    <app-poule5 *ngIf="item===5" [team]="this.teams" [poule]="i" [poules]="poules"></app-poule5>
   </p-card>
 </div>

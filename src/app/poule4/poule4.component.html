@@ -1,54 +1,19 @@
-
-<div class="parent">
-
-  <div class="div1 formatDiv"><p>{{affiche(team[poule * 6])}} </p></div>
-  <div class="div2"><p-inputNumber [(ngModel)]="match[0][0]" [showButtons]="true" buttonLayout="vertical" spinnerMode="vertical" inputId="vertical"
-                                   [inputStyle]="formatCompteur()" [min]="0" [max]="23" decrementButtonClass="p-button-secondary" incrementButtonClass="p-button-secondary" incrementButtonIcon="pi pi-plus" decrementButtonIcon="pi pi-minus">
-  </p-inputNumber> </div>
-  <div class="div3 formatDiv"><p> {{affiche(team[3+poule*6])}}</p></div>
-  <div class="div4"> <p-inputNumber [(ngModel)]="match[0][1]" [showButtons]="true" buttonLayout="vertical" spinnerMode="vertical" inputId="vertical"
-                                    [inputStyle]="formatCompteur()" [min]="0" [max]="23" decrementButtonClass="p-button-secondary" incrementButtonClass="p-button-secondary" incrementButtonIcon="pi pi-plus" decrementButtonIcon="pi pi-minus">
-  </p-inputNumber></div>
-  <div class="div5 formatDiv"><p>{{affiche(team[1+poule*6])}}</p> </div>
-  <div class="div6">  <p-inputNumber [(ngModel)]="match[1][0]" [showButtons]="true" buttonLayout="vertical" spinnerMode="vertical" inputId="vertical"
-                                     [inputStyle]="formatCompteur()" [min]="0" [max]="23" decrementButtonClass="p-button-secondary" incrementButtonClass="p-button-secondary" incrementButtonIcon="pi pi-plus" decrementButtonIcon="pi pi-minus">
-  </p-inputNumber></div>
-  <div class="div7 formatDiv"><p>{{affiche(team[2+poule*6])}} </p></div>
-  <div class="div8"> <p-inputNumber [(ngModel)]="match[1][1]" [showButtons]="true" buttonLayout="vertical" spinnerMode="vertical" inputId="vertical"
-                                    [inputStyle]="formatCompteur()" [min]="0" [max]="23" decrementButtonClass="p-button-secondary" incrementButtonClass="p-button-secondary" incrementButtonIcon="pi pi-plus" decrementButtonIcon="pi pi-minus">
-  </p-inputNumber> </div>
-  <div class="div9  formatDiv"><p>{{affiche(team[poule * 6])}}</p> </div>
-  <div class="div10">     <p-inputNumber [(ngModel)]="match[2][0]" [showButtons]="true" buttonLayout="vertical" spinnerMode="vertical" inputId="vertical"
-                                         [inputStyle]="formatCompteur()" [min]="0" [max]="23" decrementButtonClass="p-button-secondary" incrementButtonClass="p-button-secondary" incrementButtonIcon="pi pi-plus" decrementButtonIcon="pi pi-minus">
-  </p-inputNumber></div>
-  <div class="div11  formatDiv"><p> {{affiche(team[2+poule*6])}}</p> </div>
-  <div class="div12"> <p-inputNumber [(ngModel)]="match[2][1]" [showButtons]="true" buttonLayout="vertical" spinnerMode="vertical" inputId="vertical"
-                                     [inputStyle]="formatCompteur()" [min]="0" [max]="23" decrementButtonClass="p-button-secondary" incrementButtonClass="p-button-secondary" incrementButtonIcon="pi pi-plus" decrementButtonIcon="pi pi-minus">
-  </p-inputNumber> </div>
-  <div class="div13 formatDiv"><p> {{affiche(team[3+poule*6])}}</p> </div>
-  <div class="div14"> <p-inputNumber [(ngModel)]="match[3][0]" [showButtons]="true" buttonLayout="vertical" spinnerMode="vertical" inputId="vertical"
-                                     [inputStyle]="formatCompteur()" [min]="0" [max]="23" decrementButtonClass="p-button-secondary" incrementButtonClass="p-button-secondary" incrementButtonIcon="pi pi-plus" decrementButtonIcon="pi pi-minus">
-  </p-inputNumber>  </div>
-  <div class="div15 formatDiv"><p> {{affiche(team[1+poule*6])}}</p> </div>
-  <div class="div16"><p-inputNumber [(ngModel)]="match[3][1]" [showButtons]="true" buttonLayout="vertical" spinnerMode="vertical" inputId="vertical"
-                                    [inputStyle]="formatCompteur()" [min]="0" [max]="23" decrementButtonClass="p-button-secondary" incrementButtonClass="p-button-secondary" incrementButtonIcon="pi pi-plus" decrementButtonIcon="pi pi-minus">
-  </p-inputNumber>  </div>
-  <div class="div17 formatDiv"><p> {{affiche(team[poule * 6])}}</p> </div>
-  <div class="div18"> <p-inputNumber [(ngModel)]="match[4][0]" [showButtons]="true" buttonLayout="vertical" spinnerMode="vertical" inputId="vertical"
-                                     [inputStyle]="formatCompteur()" [min]="0" [max]="23" decrementButtonClass="p-button-secondary" incrementButtonClass="p-button-secondary" incrementButtonIcon="pi pi-plus" decrementButtonIcon="pi pi-minus">
-  </p-inputNumber>  </div>
-  <div class="div19 formatDiv"><p> {{affiche(team[1+poule*6])}}</p> </div>
-  <div class="div20"><p-inputNumber [(ngModel)]="match[4][1]" [showButtons]="true" buttonLayout="vertical" spinnerMode="vertical" inputId="vertical"
-                                    [inputStyle]="formatCompteur()" [min]="0" [max]="23" decrementButtonClass="p-button-secondary" incrementButtonClass="p-button-secondary" incrementButtonIcon="pi pi-plus" decrementButtonIcon="pi pi-minus">
-  </p-inputNumber>  </div>
-  <div class="div21 formatDiv"><p> {{affiche(team[2+poule*6])}}</p> </div>
-  <div class="div22"><p-inputNumber [(ngModel)]="match[5][0]" [showButtons]="true" buttonLayout="vertical" spinnerMode="vertical" inputId="vertical"
-                                    [inputStyle]="formatCompteur()" [min]="0" [max]="23" decrementButtonClass="p-button-secondary" incrementButtonClass="p-button-secondary" incrementButtonIcon="pi pi-plus" decrementButtonIcon="pi pi-minus">
-  </p-inputNumber>  </div>
-  <div class="div23 formatDiv"><p> {{affiche(team[3+poule*6])}}</p> </div>
-  <div class="div24"><p-inputNumber [(ngModel)]="match[5][1]" [showButtons]="true" buttonLayout="vertical" spinnerMode="vertical" inputId="vertical"
-                                    [inputStyle]="formatCompteur()" [min]="0" [max]="23" decrementButtonClass="p-button-secondary" incrementButtonClass="p-button-secondary" incrementButtonIcon="pi pi-plus" decrementButtonIcon="pi pi-minus">
-  </p-inputNumber>  </div>
-</div>
-
-
+<div class="parent" *ngFor="let item of matches;let i=index" >
+  <div [class]=getClass(1) class="formatDiv"><p>{{affiche(item[0])}} </p></div>
+  <div [class]=getClass(2)>
+    <p-inputNumber [(ngModel)]="match[i][0]" [showButtons]="true" buttonLayout="vertical" spinnerMode="vertical"
+                   inputId="vertical"
+                   [min]="0" [max]="23" decrementButtonClass="p-button-secondary"
+                   incrementButtonClass="p-button-secondary" incrementButtonIcon="pi pi-plus"
+                   decrementButtonIcon="pi pi-minus">
+    </p-inputNumber>
+  </div>
+  <div [class]=getClass(3) class="formatDiv"><p> {{affiche(item[1])}}</p></div>
+  <div [class]=getClass(4)>
+    <p-inputNumber [(ngModel)]="match[i][1]" [showButtons]="true" buttonLayout="vertical" spinnerMode="vertical"
+                   inputId="vertical"
+                   [min]="0" [max]="23" decrementButtonClass="p-button-secondary"
+                   incrementButtonClass="p-button-secondary" incrementButtonIcon="pi pi-plus"
+                   decrementButtonIcon="pi pi-minus">
+    </p-inputNumber>
+  </div>

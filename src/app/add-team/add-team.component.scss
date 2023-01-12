@@ -1,20 +1,34 @@
-
-.btnsupr{
-position:relative;
-
-}
+$buttonfonce:#3c4fe0;
+$buttonclair:#5adaff;
+$cotton-candy: #ffcbf2ff;
+$mauve: #f3c4fbff;
+$mauve-2: #ecbcfdff;
+$mauve-3: #e5b3feff;
+$mauve-4: #e2afffff;
+$mauve-5: #deaaffff;
+$mauve-6: #d8bbffff;
+$lavender-blue: #d0d1ffff;
+$columbia-blue: #c8e7ffff;
+$celeste: #c0fdffff;
 
 .btnsupr {
   background-image: linear-gradient(to right, #e43a15 0%, #e65245  51%, #e43a15  100%);
-  margin: 10px;
-  text-align: center;
-  text-transform: uppercase;
   transition: 0.5s;
   background-size: 200% auto;
   color: white;
   box-shadow: 0 0 20px #eee;
   border-radius: 10px;
-  display: block;
+  border: none;
+  width: 100px;
+  height: 30px;
+  margin: 0 auto;
+  padding: 0;
+  display: inline-block;
+  line-height: 30px;
+  text-align: center;
+  position :relative;
+  left:110px;
+  top: 25px;
 }
 
 .btnsupr:hover {
@@ -22,14 +36,100 @@ position:relative;
   color: #fff;
   text-decoration: none;
 }
+   .button-29 {
+     align-items: center;
+     appearance: none;
+     background-image: radial-gradient(100% 100% at 100% 0, $buttonclair 0, $buttonfonce 100%);
+     border: 0;
+     border-radius: 6px;
+     box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+     box-sizing: border-box;
+     color: black;
+     font-weight: bold;
+     cursor: pointer;
+     font-family: "JetBrains Mono",monospace;
+     height: 30px;
+     justify-content: center;
+     list-style: none;
+     overflow: hidden;
+     padding-left: 10px;
+     padding-right: 10px;
+     text-decoration: none;
+     transition: box-shadow .15s,transform .15s;
+     user-select: none;
+     -webkit-user-select: none;
+     touch-action: manipulation;
+     white-space: nowrap;
+     will-change: box-shadow,transform;
+     font-size: 12px;
+     display: inline-block;
+     line-height: 1px;
+     text-align: center;
+     position :relative;
+     left:130px;
+     top: 25px;
+   }
+
+.button-29:focus {
+  box-shadow: $buttonfonce 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+}
+
+.button-29:hover {
+  box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, $buttonfonce 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.button-29:active {
+  box-shadow: $buttonfonce 0 3px 7px inset;
+  transform: translateY(2px);
+}
+.button-pool {
+  align-items: center;
+  appearance: none;
+  background-image: radial-gradient(100% 100% at 100% 0, $cotton-candy 0, $mauve-6 100%);
+  border: 0;
+  border-radius: 6px;
+  box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: "JetBrains Mono",monospace;
+  height: 30px;
+  justify-content: center;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 12px;
+  display: inline-block;
+  line-height: 1px;
+  text-align: center;
+
+}
+
+.button-pool:focus {
+  box-shadow: $mauve-6 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, $mauve-6 0 -3px 0 inset;
+}
+
+.button-pool:hover {
+  box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, $mauve-6 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.button-pool:active {
+  box-shadow: $mauve-6 0 3px 7px inset;
+  transform: translateY(2px);
+}
 
 
-/* SCSS HEX */
-$melon: #ffb5a7ff;
-$pale-pink: #fcd5ceff;
-$seashell: #f8edebff;
-$peach-puff: #f9dcc4ff;
-$peach-crayola: #fec89aff;
 
 /* SCSS HSL */
 $melon: hsla(10, 100%, 83%, 1);
@@ -49,13 +149,13 @@ $peach-crayola: rgba(254, 200, 154, 1);
 $gradient-top: linear-gradient(0deg, #ffb5a7ff, #fcd5ceff, #f8edebff, #f9dcc4ff, #fec89aff);
 $gradient-right: linear-gradient(90deg, #ffb5a7ff, #fcd5ceff, #f8edebff, #f9dcc4ff, #fec89aff);
 $gradient-bottom: linear-gradient(180deg, #ffb5a7ff, #fcd5ceff, #f8edebff, #f9dcc4ff, #fec89aff);
-$gradient-left: linear-gradient(270deg, #ffb5a7ff, #fcd5ceff, #f8edebff, #f9dcc4ff, #fec89aff);
-$gradient-top-right: linear-gradient(45deg, #ffb5a7ff, #fcd5ceff, #f8edebff, #f9dcc4ff, #fec89aff);
+$gradient-left: linear-gradient(270deg, #ffcbf2ff, #f3c4fbff, #ecbcfdff, #e5b3feff, #e2afffff, #deaaffff, #d8bbffff, #d0d1ffff, #c8e7ffff, #c0fdffff);$gradient-top-right: linear-gradient(45deg, #ffb5a7ff, #fcd5ceff, #f8edebff, #f9dcc4ff, #fec89aff);
 $gradient-bottom-right: linear-gradient(135deg, #ffb5a7ff, #fcd5ceff, #f8edebff, #f9dcc4ff, #fec89aff);
 $gradient-top-left: linear-gradient(225deg, #ffb5a7ff, #fcd5ceff, #f8edebff, #f9dcc4ff, #fec89aff);
 $gradient-bottom-left: linear-gradient(315deg, #ffb5a7ff, #fcd5ceff, #f8edebff, #f9dcc4ff, #fec89aff);
 $gradient-radial: radial-gradient(#ffb5a7ff, #fcd5ceff, #f8edebff, #f9dcc4ff, #fec89aff);
 .btn-grad {
+
   background-image: $gradient-left;
   margin: 10px;
   text-align: center;
@@ -86,11 +186,15 @@ input{position: absolute;top:10px;left:500px;width:1000px}
   top: 100px;
   left: 150px;
 }
-h1 { color: #d04764; font-family: 'Lobster', cursive; font-size: 36px; font-weight: normal; line-height: 48px; margin: 0 0 18px; text-shadow: 1px 0 0 #fff; }
+h1 { color: #d04764; font-family: 'Lobster', cursive; font-size: 36px; font-weight: normal; line-height: 30px; margin: 0 0 18px; text-shadow: 1px 0 0 #fff; }
 
 h2 { color: #2CA4B0; font-family: 'Oleo Script', cursive; font-size: 24px; font-weight: normal; line-height: 32px; margin: 0 0 18px; text-shadow: 1px 0 0 #fff; }
 
-p { color: #333; font-family: 'Original Surfer', cursive; font-size: 16px; line-height: 5px;; font-weight: 600}
+p { color: #333; font-family: 'Original Surfer', cursive; font-size: 16px; line-height: 5px;; font-weight: 600;
+  position :relative;
+  left:-20px;
+  top: -25px;
+}
 
 a { color: #d04764; font-family: 'Original Surfer', cursive; }
 :host ::ng-deep {
@@ -174,8 +278,7 @@ a { color: #d04764; font-family: 'Original Surfer', cursive; }
     }
 
     .product-grid-item-content {
-      text-align: center;
-
+      text-align: left;
     }
 
     .product-price {

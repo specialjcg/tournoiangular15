@@ -2,16 +2,15 @@ import {Component, Input} from '@angular/core';
 import {Team} from "../domain/team";
 
 @Component({
-  selector: 'app-poule4',
-  templateUrl: './poule4.component.html',
-  styleUrls: ['./poule4.component.scss']
+  selector: 'app-poule5',
+  templateUrl: './poule5.component.html',
+  styleUrls: ['./poule5.component.scss']
 })
-export class Poule4Component {
+export class Poule5Component {
   @Input() team :Team[]=[]
   @Input() poule :number = 0
   @Input() poules :number[] = []
-  match:number[][]=[[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]]
-  matches:number[][] = [[0,1],[2,3],[0,2],[1,3],[0,3],[1,2]]
+  match:number[][]=[[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]]
   score0: number=0;
 
   constructor() {
@@ -35,9 +34,7 @@ export class Poule4Component {
   addresult() {
 
   }
-  getClass(i: number) {
-    return "div" + i
-  }
+
   formatCompteur() {
     return {width:'3rem',height:'10px', 'font-size':'15px'}
   }
